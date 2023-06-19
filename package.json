@@ -1,0 +1,41 @@
+{
+  "name": "neopixel-serial-api",
+  "homepage": "https://github.com/reelyactive/neopixel-serial-api/",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
+  "description": "REST API to control NeoPixel strips via a serial link to a microcontroller.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "neopixels",
+    "serial",
+    "API"
+  ],
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./lib/neopixelserialapi.js",
+  "scripts": {
+    "start": "node bin/neopixel-serial-api"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/neopixel-serial-api.git"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "serialport": "^10.5.0"
+  },
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/reelyactive/neopixel-serial-api/issues"
+  },
+  "contributors": [
+    {
+      "name": "Jeffrey Dungen"
+    }
+  ],
+  "license": "MIT"
+}

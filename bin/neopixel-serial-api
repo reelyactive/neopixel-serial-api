@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const http = require('http');
+const express = require('express');
+const NeopixelSerialAPI = require('../lib/neopixelserialapi.js');
+
+
+const PORT = process.env.PORT || 3001;
+
+
+let app = express();
+app.use(express.json());
+
+let server = http.createServer(app);
+server.listen(PORT, () => {
+  console.log('neopixel-serial-api instance is listening on port', PORT);
+});
+
+const options = { app: app };
+
+let api = new NeopixelSerialAPI(options);
