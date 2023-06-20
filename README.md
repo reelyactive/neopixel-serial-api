@@ -86,26 +86,26 @@ __neopixel-serial-api__ translates API requests into serial messages, according 
 
 Each serial message is 6 bytes long, as specified in the following table, and terminated with a newline character ('\n').
 
-| Byte offset | Description                                      |
-|:------------|:-------------------------------------------------|
-| 0           | Strip id (0 to 127) or special command (128-255) |
-| 1           | MSB of LED offset                                |
-| 2           | LSB of LED offset                                |
-| 3           | Red intensity (0 to 255)                         |
-| 4           | Green intensity (0 to 255)                       |
-| 5           | Blue intensity (0 to 255)                        |
+| Byte offset | Description                                       |
+|:------------|:--------------------------------------------------|
+| 0           | Strip id (0 to 127) or special command (128-255)  |
+| 1           | MSB of LED offset or strip id for special command |
+| 2           | LSB of LED offset                                 |
+| 3           | Red intensity (0 to 255)                          |
+| 4           | Green intensity (0 to 255)                        |
+| 5           | Blue intensity (0 to 255)                         |
 
 The following special commands are supported:
 - 0xaa: _display the current configuration_
 - 0xff: _clear the current configuration_
 
-For example, to clear strip 0 and make the first three LEDs red, green and blue, respectively, the serial message sequence, as hexadecimal strings, would be as follows:
+For example, to clear strip 1 and make the first three LEDs red, green and blue, respectively, the serial message sequence, as hexadecimal strings, would be as follows:
 
-    ff00000000000a
+    ff01000000000a
     000000ff00000a
     00000100ff000a
     0000020000ff0a
-    aa00000000000a
+    aa01000000000a
 
 The seventh byte in each message above is the newline character (0x0a).
 
