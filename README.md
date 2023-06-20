@@ -14,6 +14,16 @@ Clone this repository, install package dependencies with `npm install`, and then
 __neopixel-serial-api__ will attempt to connect with a microcontroller at 9600 baud on a serial/USB link, and accept requests to configure via API any LED strips connected to that microcontroller.
 
 
+Microcontrollers
+----------------
+
+The following microcontrollers are supported, with code provided:
+
+| Microcontroller (and shield)   | Code (in /microcontrollers folder) |
+|:-------------------------------|:-----------------------------------|
+| Arduino Nano with Grove shield | arduino-nano.ino                   |
+
+
 REST API
 --------
 
